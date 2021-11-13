@@ -6,7 +6,7 @@ import MenuItemsProduct from './MenuItemsProduct'
 function Nav() {
     return (
         <nav className='flex gap-4'>
-            <span>Nav</span>
+            <div className=''></div>
             <MenuItemsCompany />
             <MenuItemsConnect />
             <MenuItemsProduct />

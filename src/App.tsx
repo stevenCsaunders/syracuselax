@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="App font-overpass">
+    <div className="font-overpass">
       <Header />
       <main className=''>
         <ContentLeft />

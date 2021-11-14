@@ -3,12 +3,12 @@ import Nav from './Nav'
 
 const Header: React.FC = () => {
     return (
-        <header className="text-center bg-gradient-to-br from-Green-light to-blue px-4">
+        <header className="text-white text-center bg-intro bg-cover px-4 rounded-bl-10xl p-5">
             <Nav />
-            <h1 className='font-bold text-3xl '>
+            <h1 className='font-bold text-3xl text-white'>
                 Syracuse Youth Lacrosse
             </h1>
-            <h2 className='text-lg'>The Syracuse Youth LAX Program is for boys and gilrs grades K-8</h2>
+            <h2 className='text-lg text-white'>The Syracuse Youth LAX Program is for boys and gilrs grades K-8</h2>
         </header>
     )
 }

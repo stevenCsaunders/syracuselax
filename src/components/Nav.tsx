@@ -1,16 +1,22 @@
 import React from 'react'
-import MenuItemsCompany from './MenuItemsCompany'
-import MenuItemsConnect from './MenuItemsConnect'
-import MenuItemsProduct from './MenuItemsProduct'
 
-function Nav() {
+import logo from '../images/LogoSm.png'
+
+const Nav: React.FC = () => {
+
     return (
-        <nav className='flex gap-4'>
-            <div className=''></div>
-            <MenuItemsCompany />
-            <MenuItemsConnect />
-            <MenuItemsProduct />
-        </nav>
+        <div className='flex'>
+            <img src={logo} alt='Titan sword logo with no text' className='w-16 h-16' />
+
+            {/* Move this in to a useEffect toshow/hide the nav box */}
+            <nav className='flex flex-col invisible'>
+                <ul>
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ul>
+            </nav>
+        </div>
     )
 }
 

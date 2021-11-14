@@ -28,7 +28,7 @@ module.exports = {
       }
     },
     borderRadius: {
-      'rounded-bl-10xl': '0px 0px 0px 100px'
+      'rounded-bl-10xl': '0px 0px 0px 10rem'
     }
   },
   variants: {

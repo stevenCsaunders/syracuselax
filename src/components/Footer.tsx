@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Nav from "./Nav";
 
 const Footer: React.FC = () => {
-    return (
-        <footer>
-            <p>Footer</p>
-        </footer>
-    )
-}
+  return (
+    <footer className="bg-blue text-white rounded-tr-xxl">
+      <Nav />
+    </footer>
+  );
+};
 
 export default Footer;

@@ -1,17 +1,26 @@
 import React from "react";
-import logo from "../images/logo.svg";
 
-export default function ContentLeft() {
+const ContentLeft: React.FC = () => {
   return (
-    <div className="flex flex-col items-center px-4">
-      <h3 className="text-2xl text-black pb-4">Title Here for SYLAX Intro</h3>
-      <img src={logo} alt="Youth Lacrosse Player" className="" />
-      <h3 className="text-2xl text-black pb-4">Title Here for SYLAX Intro</h3>
-      <p className="text-center">
+    <div className="flex flex-col items-center px-4 pb-10 text-center">
+      <h3 className="text-3xl pb-4 font-bold">
+        Title Here for SYLAX Additional Info
+      </h3>
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Youth Lacrosse Player"
+        className="mb-10"
+      />
+      <h4 className="text-2xl pb-4 font-bold">
+        Title Here for SYLAX Additional Info
+      </h4>
+      <p>
         The Syracuse Youth LAX Program has expanded and there is a great need
         for community involvement. Increased youth players and parents are key
         to success.
       </p>
     </div>
   );
-}
+};
+
+export default ContentLeft;

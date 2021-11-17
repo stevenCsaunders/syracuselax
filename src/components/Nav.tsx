@@ -1,17 +1,15 @@
-import React from 'react'
-import MenuItemsCompany from './MenuItemsCompany'
-import MenuItemsConnect from './MenuItemsConnect'
-import MenuItemsProduct from './MenuItemsProduct'
+import React from "react";
 
-function Nav() {
-    return (
-        <nav className='flex gap-4'>
-            <div className=''></div>
-            <MenuItemsCompany />
-            <MenuItemsConnect />
-            <MenuItemsProduct />
-        </nav>
-    )
-}
+const Nav: React.FC = () => {
+  return (
+    <nav className="flex flex-col">
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Nav
+export default Nav;

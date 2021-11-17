@@ -1,15 +1,22 @@
-import React from "react";
+interface NavProps {
+	navStyles: string
+	navItemStyles: string
+}
 
-const Nav: React.FC = () => {
-  return (
-    <nav className="flex flex-col">
-      <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-      </ul>
-    </nav>
-  );
-};
+const Nav = ({ navStyles, navItemStyles }: NavProps) => {
+  //TODO
+	//Needs state for isOpen to pass on to hamburger menu
+	//link navigation to contact page, schedule and registration
 
-export default Nav;
+	return (
+		<nav className={navStyles}>
+			<ul className='flex flex-col items-center gap-4'>
+				<li className={navItemStyles}>One</li>
+				<li className={navItemStyles}>Two</li>
+				<li className=''>Three</li>
+			</ul>
+		</nav>
+	)
+}
+
+export default Nav

@@ -10,15 +10,15 @@ const NavBar: FC = () => {
 	//Pass props down to Hamburger component for isOpen and styles
 
 	return (
-		<div className='flex justify-between pb-16'>
+		<div className="flex pb-16 relative justify-between md:items-center">
 			<img
 				src={logo}
-				alt='Titan sword logo with no text'
-				className='w-16 h-16'
+				alt="Titan sword logo with no text"
+				className="w-16 h-16 jsutify-start md:ml-16"
 			/>
 			<Nav
-				navStyles='absolute right-5 -z-10 h-auto max-w-6 w-7/12 bg-white text-black py-10'
-				navItemStyles='text-black border-b border-solid border-black border-opacity-10 w-8/12 py-2'
+				navStyles="-z-10 h-auto max-w-6 w-7/12 bg-white text-black py-10 md:bg-transparent md:text-white md:py-0 md:static md:flex md:justify-end md:mr-16 "
+				navItemStyles="border-b border-solid border-black border-opacity-10 py-2 px-10 md:border-none md:px-7"
 			/>
 			<Hamburger />
 		</div>

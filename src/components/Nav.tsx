@@ -10,10 +10,10 @@ const Nav = ({ navStyles, navItemStyles }: NavProps) => {
 
 	return (
 		<nav className={navStyles}>
-			<ul className='flex flex-col items-center gap-4'>
-				<li className={navItemStyles}>One</li>
-				<li className={navItemStyles}>Two</li>
-				<li className=''>Three</li>
+			<ul className='flex flex-col items-center gap-4 md:flex-row'>
+				<li className={navItemStyles}>About</li>
+				<li className={navItemStyles}>Schedule</li>
+				<li className='md:py-2 md:px-7'>Contact</li>
 			</ul>
 		</nav>
 	)

@@ -10,7 +10,7 @@ const App: React.FC = () => {
 	//any state for full app goes here
 
 	return (
-		<div className='font-overpass'>
+		<div className='font-overpass text-black'>
 			<Header />
 			<main className=''>
 				<ContentLeft />

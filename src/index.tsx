@@ -6,7 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App isNavOpen={false} handleClick={function (): void {
+      throw new Error('Function not implemented.');
+    } } />
   </React.StrictMode>,
   document.getElementById('root')
 );

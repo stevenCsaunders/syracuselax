@@ -1,9 +1,11 @@
-interface NavProps {
+import { FC } from "react"
+
+interface INavProps {
 	navStyles: string
 	navItemStyles: string
 }
 
-const Nav = ({ navStyles, navItemStyles }: NavProps) => {
+const Nav: FC<INavProps> = ({ navStyles, navItemStyles }: INavProps) => {
   //TODO
 	//Needs state for isOpen to pass on to hamburger menu
 	//link navigation to contact page, schedule and registration

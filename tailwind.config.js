@@ -7,7 +7,7 @@ module.exports = {
 				overpass: ['"overpass"', 'arial', 'san-serif'],
 			},
 			backgroundImage: {
-				intro: "linear-gradient(135deg, hsla(208, 96%, 18%, .95) 0%, hsla(112, 96%, 48%, .95) 100%), url('../src/images/bg-pattern-intro.svg')",
+				intro: "linear-gradient(135deg, hsla(208, 96%, 18%, .95) 0%, hsla(112, 96%, 48%, .80) 100%), url('../src/images/header-bg.png')",
 				body: "url('../src/images/SticksLogoSmBG.png')",
 			},
 			maxWidth: {

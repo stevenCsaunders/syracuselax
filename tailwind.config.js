@@ -7,8 +7,9 @@ module.exports = {
 				overpass: ['"overpass"', 'arial', 'san-serif'],
 			},
 			backgroundImage: {
-				intro: "linear-gradient(135deg, hsla(208, 96%, 18%, .95) 0%, hsla(112, 96%, 48%, .95) 100%), url('../src/images/bg-pattern-intro.svg')",
+				intro: "linear-gradient(135deg, hsla(208, 96%, 18%, .95) 0%, hsla(112, 96%, 48%, .80) 100%), url('../src/images/header-bg.png')",
 				body: "url('../src/images/SticksLogoSmBG.png')",
+				circles: "url('../src/images/bg-pattern-circles.svg')",
 			},
 			maxWidth: {
 				1: '10%',
@@ -34,6 +35,16 @@ module.exports = {
 				9: '90%',
 				full: '100%',
 			},
+			borderRadius: {
+				none: '0',
+				sm: '0.125rem',
+				DEFAULT: '0.25rem',
+				md: '0.375rem',
+				lg: '0.5rem',
+				full: '9999px',
+				xl: '1rem',
+				xxl: '5rem',
+			},
 		},
 		colors: {
 			transparent: 'transparent',
@@ -51,16 +62,6 @@ module.exports = {
 			white: {
 				DEFAULT: 'hsl(0, 0%, 95%)',
 			},
-		},
-		borderRadius: {
-			none: '0',
-			sm: '0.125rem',
-			DEFAULT: '0.25rem',
-			md: '0.375rem',
-			lg: '0.5rem',
-			full: '9999px',
-			xl: '1rem',
-			xxl: '5rem',
 		},
 	},
 	variants: {

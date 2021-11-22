@@ -1,1 +1,18 @@
-<svg width="1014" height="1018" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(1 0 0 -1 0 1018)" fill="none" fill-rule="evenodd"><rect fill="#3E4062" x="213" y="214" width="588" height="590" rx="294"/><rect stroke="#878D92" opacity=".5" x=".5" y=".5" width="1013" height="1017" rx="506.5"/><rect stroke="#878D92" x="170.5" y="171.5" width="673" height="675" rx="336.5"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1014 1018" style="enable-background:new 0 0 1014 1018;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:5.000000e-02;fill-rule:evenodd;clip-rule:evenodd;fill:#3E4062;}
+	.st1{opacity:5.000000e-02;fill:none;stroke:#878D92;enable-background:new    ;}
+	.st2{opacity:5.000000e-02;fill:none;stroke:#878D92;}
+</style>
+<g>
+	<path class="st0" d="M507,804L507,804c162.4,0,294-131.6,294-294v-2c0-162.4-131.6-294-294-294l0,0c-162.4,0-294,131.6-294,294v2
+		C213,672.4,344.6,804,507,804z"/>
+	<path class="st1" d="M507,1017.5L507,1017.5c279.7,0,506.5-226.8,506.5-506.5v-4C1013.5,227.3,786.7,0.5,507,0.5l0,0
+		C227.3,0.5,0.5,227.3,0.5,507v4C0.5,790.7,227.3,1017.5,507,1017.5z"/>
+	<path class="st2" d="M507,846.5L507,846.5c185.8,0,336.5-150.7,336.5-336.5v-2c0-185.8-150.7-336.5-336.5-336.5l0,0
+		c-185.8,0-336.5,150.7-336.5,336.5v2C170.5,695.8,321.2,846.5,507,846.5z"/>
+</g>
+</svg>

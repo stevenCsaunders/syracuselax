@@ -1,16 +1,16 @@
 import React from 'react'
-import contentLeftImg from '../images/content-left.png'
+import contentHighlightImg from '../images/content-highlight.png'
 
 const ContentHighlight: React.FC = () => {
 	return (
 		<div className='flex flex-col items-center px-10 pb-20 mb-32 bg-blue text-white rounded-bl-xxl rounded-tr-xxl md:flex-row md:px-20 md:pb-0'>
-			<div className='flex flex-col items-center text-center md:text-left md:flex-row -my-24 md:-my-0'>
+			<div className='flex flex-col items-center text-center  md:text-left md:flex-row '>
 				<img
-					src={contentLeftImg}
+					src={contentHighlightImg}
 					alt='Youth Lacrosse Player'
-					className='w-4 -mt-32'
+					className='w-8 -mt-32 md:w-4 md:-mt-40'
 				/>
-				<div className='md:ml-10 py-10'>
+				<div className='md:ml-10 py-10 '>
 					<h3 className='text-3xl pb-4 font-bold'>
 						Title Here for SYLAX Additional Info
 					</h3>

@@ -16,10 +16,10 @@ const Header: FC<IProps> = ({isNavOpen, handleClick}: IProps) => {
 				The Syracuse Youth LAX Program is for boys and gilrs grades K-8
 			</h2>
 			<div className='flex gap-4 justify-center pb-32 md:gap-6'>
-				<button className='px-6 py-2 bg-white text-blue rounded-full md:px-10 md:py-3'>
+				<button className='px-6 py-2 bg-white text-blue rounded-full hover:bg-opacity-80 md:px-10 md:py-3'>
 					Register
 				</button>
-				<button className='border border-solid border-white px-6 py-2 rounded-full md:px-10 md:py-3'>
+				<button className='border border-solid border-white px-6 py-2 rounded-full hover:bg-white hover:bg-opacity-20 md:px-10 md:py-3'>
 					Contact
 				</button>
 			</div>

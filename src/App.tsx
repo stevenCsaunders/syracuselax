@@ -22,7 +22,7 @@ const App: FC<IProps> = () => {
 
 	return (
 		<Router>
-			<div className='font-overpass text-black flex flex-col w-full lg:max-w-screen-xl mx-auto bg-white filter drop-shadow-2xl'>
+			<div className='font-overpass leading-none text-black flex flex-col w-full lg:max-w-screen-xl mx-auto bg-white filter drop-shadow-2xl'>
 				<Header isNavOpen={isNavOpen} handleClick={handleClick} />
 				<main className='mx-4 md:mx-28'>
 					<ContentLeft />

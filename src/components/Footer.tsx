@@ -7,10 +7,11 @@ const Footer: FC = () => {
 		<footer className='flex flex-col bg-black text-white rounded-tr-xxl items-center pt-10 pb-20'>
 			<img src={image} alt='small logo' className='w-14 h-14 mb-4' />
 			<Nav
-				navStyles='text-white'
-				navLiStyles='border-b border-solid border-white border-opacity-30 py-2 md:px-9 '
-				navUlStyles='text-center'
-				navLastLiStyles='py-2 md:border-none md:px-9'
+				navStyles={`text-white`}
+				navLiStyles={`border-b border-solid border-white border-opacity-30 py-2 md:px-9`}
+				navUlStyles={`text-center`}
+				navLastLiStyles={`py-2 md:border-none md:px-9`}
+				linkStyles={`w-full`}
 			/>
 		</footer>
 	)

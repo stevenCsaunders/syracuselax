@@ -12,12 +12,10 @@ const ContentRight: React.FC = () => {
 			/>
 			<div className='md:text-left md:ml-10'>
 				<h3 className='text-3xl pb-4 font-bold'>
-					Title Here for SYLAX Additional Info
+					Tournaments and Camps 
 				</h3>
 				<p>
-					The Syracuse Youth LAX Program has expanded and there is a
-					great need for community involvement. Increased youth
-					players and parents are key to success.
+					Throughout the year, there are several youth lacrosse tournaments and camps held in Utah. This section of the site will be updated as more information becomes available on these topics, so check back closer to the spring 2022 season for info.
 				</p>
 			</div>
 		</div>

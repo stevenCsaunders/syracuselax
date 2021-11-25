@@ -14,7 +14,8 @@ ReactDOM.render(
 					throw new Error('Function not implemented.')
 				}}
 				headerStyles={''}
-				h1Styles={''}
+				h2Content={''}
+				h1Content={''}
 				buttonDivStyles={''}
 			/>
 		</BrowserRouter>

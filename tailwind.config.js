@@ -45,6 +45,7 @@ module.exports = {
 				xl: '1rem',
 				xxl: '5rem',
 			},
+			borderStyle: ['hover'],
 		},
 		colors: {
 			transparent: 'transparent',

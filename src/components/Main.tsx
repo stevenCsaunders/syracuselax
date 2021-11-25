@@ -7,8 +7,6 @@ import Header from './Header'
 
 const Main: React.FC<IProps & IHeaderProps> = ({
 	headerStyles,
-	h1Styles,
-	buttonDivStyles,
 	isNavOpen,
 	handleNavClick,
 }: IProps & IHeaderProps) => {
@@ -18,8 +16,11 @@ const Main: React.FC<IProps & IHeaderProps> = ({
 				handleNavClick={handleNavClick}
 				isNavOpen={isNavOpen}
 				headerStyles={headerStyles}
-				h1Styles={h1Styles}
-				buttonDivStyles={buttonDivStyles}
+				h2Content={
+					'The Syracuse Youth LAX Program is for boys and girls grades K-8'
+				}
+				buttonDivStyles={''}
+				h1Content={'Syracuse Titans Youth Lacrosse'}
 			/>
 
 			<main className='mx-4 md:mx-28'>

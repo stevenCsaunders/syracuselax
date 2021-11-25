@@ -6,7 +6,7 @@ const ContentLeft: React.FC = () => {
 		//POSSIBLE IMPLEMENTATION -  object-fit: cover; object-position: bottom;
 		<div className='flex flex-col items-center px-4 pb-10 mb-36 text-center bg-circles bg-fixed bg-right-bottom  bg-no-repeat md:mb-32 md:px-0'>
 			<h3 className='text-3xl pb-4 font-bold text-center md:pb-20'>
-				Title Here for SYLAX Additional Info
+				Syracuse Youth Lacrosse Additional Info
 			</h3>
 			<div className='flex flex-col items-center md:flex-row-reverse '>
 				<img

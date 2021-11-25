@@ -1,5 +1,5 @@
 import { FC } from 'react'
-
+import { NavLink } from 'react-router-dom'
 
 interface INavProps {
 	navStyles: string
@@ -25,34 +25,25 @@ const Nav: FC<INavProps> = ({
 			<nav className={navStyles}>
 				<ul className={navUlStyles}>
 					<li className={navLiStyles}>
+						<NavLink to='/about' className={linkStyles}>
+							About
+						</NavLink>
+					</li>
+					<li className={navLiStyles}>
 						<a
-							href='https://www.google.com'
+							href='http://www.imlaxutah.org/Registration/Default.asp?org=imlaxutah.org'
 							target='_blank'
 							rel='noreferrer'
 							className={linkStyles}
 						>
-							About
+							Registration
 						</a>
 					</li>
-					<a
-						href='https://www.google.com'
-						target='_blank'
-						rel='noreferrer'
-						className={linkStyles}
-					>
-						{' '}
-						<li className={navLiStyles}>Registration</li>
-					</a>
-
-					<a
-						href='https://www.google.com'
-						target='_blank'
-						rel='noreferrer'
-						className={linkStyles}
-					>
-						{' '}
-						<li className={navLastLiStyles}>Contact</li>
-					</a>
+					<li className={navLastLiStyles}>
+						<NavLink to='/contact' className={linkStyles}>
+							Contact
+						</NavLink>
+					</li>
 				</ul>
 			</nav>
 		</>

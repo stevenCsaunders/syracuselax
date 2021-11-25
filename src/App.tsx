@@ -1,37 +1,73 @@
 import { FC, useState } from 'react'
-import Header from './components/Header'
-import ContentLeft from './components/ContentLeft'
-import ContentHighlight from './components/ContentHighlight'
-import ContentRight from './components/ContentRight'
 import Footer from './components/Footer'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import Main from './components/Main'
+import About from './components/About'
+import Contact from './components/Contact'
+
 
 export interface IProps {
 	isNavOpen?: boolean
-	handleClick: () => void
+	handleNavClick: () => void
+}
+export interface IHeaderProps {
+	headerStyles: string
+	h1Styles: string
+	buttonDivStyles: string
 }
 
-const App: FC<IProps> = () => {
+const App: FC<IProps & IHeaderProps> = () => {
 	//TODO
 	const [isNavOpen , setIsNavOpen] = useState(false)
 
-	const handleClick = () => {
+	const handleNavClick = () => {
 		setIsNavOpen(!isNavOpen)
 	}
 	//any state for full app goes here
 
 	return (
-		<Router>
 			<div className='font-overpass text-black flex flex-col w-full lg:max-w-screen-xl mx-auto bg-white filter drop-shadow-2xl'>
-				<Header isNavOpen={isNavOpen} handleClick={handleClick} />
-				<main className='mx-4 md:mx-28'>
-					<ContentLeft />
-					<ContentHighlight />
-					<ContentRight />
-				</main>
+				<Routes>
+					<Route
+						path='/'
+						element={
+							<Main
+								handleNavClick={handleNavClick}
+								isNavOpen={isNavOpen}
+								headerStyles={''}
+								buttonDivStyles={''}
+								h1Styles={''}
+							/>
+						}
+					/>
+					<Route
+						path='/about'
+						element={
+							<About
+								handleNavClick={handleNavClick}
+								isNavOpen={isNavOpen}
+								headerStyles={''}
+								buttonDivStyles={''}
+								h1Styles={''}
+							/>
+						}
+					/>
+					<Route
+						path='/contact'
+						element={
+							<Contact
+								handleNavClick={handleNavClick}
+								isNavOpen={isNavOpen}
+								headerStyles={''}
+								buttonDivStyles={''}
+								h1Styles={''}
+							/>
+						}
+					/>
+				</Routes>
 				<Footer />
 			</div>
-		</Router>
+
 	)
 }
 

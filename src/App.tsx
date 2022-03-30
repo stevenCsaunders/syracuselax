@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom'
 import Main from './components/Main'
 import About from './components/About'
 import Contact from './components/Contact'
+import ParentsInfo from './components/ParentsInfo'
+import Schedules from './components/Schedules'
 
 export interface IProps {
 	isNavOpen?: boolean
@@ -58,6 +60,32 @@ const App: FC<IProps & IHeaderProps> = () => {
 					path='/contact'
 					element={
 						<Contact
+							handleNavClick={handleNavClick}
+							isNavOpen={isNavOpen}
+							headerStyles={''}
+							buttonDivStyles={''}
+							h2Content={''}
+							h1Content={''}
+						/>
+					}
+				/>
+				<Route
+					path='/schedules'
+					element={
+						<Schedules
+							handleNavClick={handleNavClick}
+							isNavOpen={isNavOpen}
+							headerStyles={''}
+							buttonDivStyles={''}
+							h2Content={''}
+							h1Content={''}
+						/>
+					}
+				/>
+				<Route
+					path='/parentsinfo'
+					element={
+						<ParentsInfo
 							handleNavClick={handleNavClick}
 							isNavOpen={isNavOpen}
 							headerStyles={''}

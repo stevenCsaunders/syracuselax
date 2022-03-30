@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+    cursor: pointer;
+}
+
 .hamburger {
     padding: 15px 15px;
     display: inline-block;

@@ -10,7 +10,7 @@ const Hamburger: FC<IProps> = ({ handleNavClick }: IProps) => {
 	return (
 		<div className='absolute top-2 right-2 z-10'>
 			<button
-				className='hamburger hamburger--boring  md:hidden'
+				className='hamburger hamburger--boring  lg:hidden'
 				type='button'
 				onClick={handleNavClick}
 			>

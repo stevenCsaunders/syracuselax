@@ -1,12 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
+
 import contentRight from '../images/content-right.png'
 import FileLink from '../utils/baseLinks'
+
 
 const ContentRight: React.FC = () => {
 
 	const handleFileOpen = (fileName: string) => {
 		window.open(fileName)
 	}
+
+	const navigate = useNavigate()
 
 	return (
 		//POSSIBLE IMPLEMENTATION -  object-fit: cover; object-position: bottom;
@@ -18,22 +23,15 @@ const ContentRight: React.FC = () => {
 			/>
 			<div className='md:text-left md:ml-10'>
 				<h3 className='text-3xl pb-4 font-bold'>
-					Syracuse Youth Clinic
+					Team Schedules
 				</h3>
 				<p className='text-lg font-thin leading-6 mb-4'>
-					<strong>WHEN:</strong> February 17th, 2022 - 4:00 to 6:00 PM{' '}
-					<br />
-					<strong>WHERE:</strong> Syracuse High Lacrosse Field (west
-					of the stadium)
-					<br />
-					<strong>COST:</strong> $25.00 per participant
-					<br />
-					All youth welcome, ages K-8. Equipment provided!
+					Find all the scheduled games for your team here.  
 				</p>
 				<button
 					className='border border-solid border-blue px-6 py-2 rounded-full hover:bg-blue hover:text-white md:px-10'
 					onClick={() =>
-						handleFileOpen(FileLink('YouthClinicSyracuseHigh.pdf'))
+						navigate('/schedules')
 					}
 				>
 					More Info

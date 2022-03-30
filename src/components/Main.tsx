@@ -24,9 +24,9 @@ const Main: React.FC<IProps & IHeaderProps> = ({
 			/>
 
 			<main className='mx-4 md:mx-28'>
-				<ContentRight />
 				<ContentLeft />
 				<ContentHighlight />
+				<ContentRight />
 			</main>
 		</>
 	)

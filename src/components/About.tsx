@@ -24,7 +24,7 @@ const About: React.FC<IProps & IHeaderProps> = ({
 			/>
 			<div className='mx-28'>
 				<h4 className='text-4xl text- text-center pb-10'>
-					We are the TItans, Titans, Titans!
+					We are the Titans, Titans, Titans!
 				</h4>
 				<div className='flex flex-col xl:flex-row-reverse mb-24 items-start'>
 					<img

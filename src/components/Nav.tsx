@@ -39,9 +39,19 @@ const Nav: FC<INavProps> = ({
 							Registration
 						</a>
 					</li>
-					<li className={navLastLiStyles}>
+					<li className={navLiStyles}>
 						<NavLink to='/contact' className={linkStyles}>
 							Contact
+						</NavLink>
+					</li>
+					<li className={navLiStyles}>
+						<NavLink to='/schedules' className={linkStyles}>
+							Schedules
+						</NavLink>
+					</li>
+					<li className={navLastLiStyles}>
+						<NavLink to='/parentsinfo' className={linkStyles}>
+							Parents
 						</NavLink>
 					</li>
 				</ul>

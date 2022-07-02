@@ -29,7 +29,7 @@ const Schedules: React.FC<IProps & IHeaderProps> = ({
 							7/8 Syracuse Blue
 						</h3>
 						<iframe
-							src='http://leagueathletics.com/schedule.asp?teams=683253&org=imlaxutah.org'
+							src='https://leagueathletics.com/schedule.asp?teams=683253&org=imlaxutah.org'
 							width='100%'
 							height='500'
 							title='Syracuse 7/8 Blue Schedule'
@@ -40,7 +40,7 @@ const Schedules: React.FC<IProps & IHeaderProps> = ({
 							7/8 Syracuse Green
 						</h3>
 						<iframe
-							src='http://leagueathletics.com/schedule.asp?teams=676695&org=imlaxutah.org'
+							src='https://leagueathletics.com/schedule.asp?teams=676695&org=imlaxutah.org'
 							width='100%'
 							height='500'
 							title='Syracuse 7/8 Green Schedule'
@@ -51,7 +51,7 @@ const Schedules: React.FC<IProps & IHeaderProps> = ({
 							5/6 Syracuse
 						</h3>
 						<iframe
-							src='http://leagueathletics.com/schedule.asp?teams=676742&org=imlaxutah.org'
+							src='https://leagueathletics.com/schedule.asp?teams=676742&org=imlaxutah.org'
 							width='100%'
 							height='500'
 							title='Syracuse 5/6'
@@ -62,7 +62,7 @@ const Schedules: React.FC<IProps & IHeaderProps> = ({
 							3/4 Syracuse
 						</h3>
 						<iframe
-							src='http://leagueathletics.com/schedule.asp?teams=676789&org=imlaxutah.org'
+							src='https://leagueathletics.com/schedule.asp?teams=676789&org=imlaxutah.org'
 							width='100%'
 							height='500'
 							title='Syracuse 3/4'
@@ -73,7 +73,7 @@ const Schedules: React.FC<IProps & IHeaderProps> = ({
 							K/1 Syracuse
 						</h3>
 						<iframe
-							src='http://leagueathletics.com/schedule.asp?teams=676833&org=imlaxutah.org'
+							src='https://leagueathletics.com/schedule.asp?teams=676833&org=imlaxutah.org'
 							width='100%'
 							height='500'
 							title='Syracuse K/1'

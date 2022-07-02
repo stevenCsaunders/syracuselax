@@ -18,7 +18,9 @@ const Header: FC<IProps & IHeaderProps> = ({
 	let navigate = useNavigate()
 
 	return (
-		<header className={`${headerStyles}text-white text-center bg-intro bg-cover px-5 pt-10 mb-16 rounded-bl-xxl md:px-28`}>
+		<header
+			className={`${headerStyles}text-white text-center bg-intro bg-cover px-5 pt-10 mb-16 rounded-bl-xxl md:px-28`}
+		>
 			<NavBar isNavOpen={isNavOpen} handleNavClick={handleNavClick} />
 			<h1 className='text-4xl text-white pb-4 md:text-5xl'>
 				{h1Content}
@@ -26,19 +28,25 @@ const Header: FC<IProps & IHeaderProps> = ({
 			<h2 className='text-lg font-light pb-12 text-white md:text-2xl'>
 				{h2Content}
 			</h2>
-			<div className={`${buttonDivStyles} flex gap-4 justify-center pb-32 md:gap-6`}>
+			<div
+				className={`${buttonDivStyles} flex gap-4 justify-center pb-32 md:gap-6`}
+			>
 				<button
 					className='px-6 py-2 bg-white text-blue rounded-full hover:bg-opacity-80 md:px-10 md:py-3'
-					onClick={() => {window.open(
-						'http://www.imlaxutah.org/Registration/Default.asp?org=imlaxutah.org',
-						'_blank'
-					)}}
+					onClick={() => {
+						window.open(
+							'http://www.imlaxutah.org/Registration/Default.asp?org=imlaxutah.org',
+							'_blank'
+						)
+					}}
 				>
-					Register
+					<strong>Fall Registration Opens July 20th</strong>
 				</button>
 				<button
 					className='border border-solid border-white px-6 py-2 rounded-full hover:bg-white hover:bg-opacity-20 md:px-10 md:py-3'
-					onClick={() => {navigate('/contact')}}
+					onClick={() => {
+						navigate('/contact')
+					}}
 				>
 					Contact
 				</button>

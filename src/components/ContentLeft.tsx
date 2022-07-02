@@ -1,5 +1,5 @@
 import React from 'react'
-import contentLeftImg from '../images/content-left.png'
+import contentLeftImg from '../images/girlsClinic2022.png'
 import { useNavigate } from 'react-router'
 
 const ContentLeft: React.FC = () => {
@@ -17,12 +17,24 @@ const navigate = useNavigate();
 				/>
 				<div className='md:text-left md:mr-10'>
 					<h4 className='text-3xl pb-4 font-bold'>
-						Join Us and Help Make the Syracuse YLAX Program Great!
+						2022 Girls Lacrosse Clinic
 					</h4>
 					<p className='text-lg font-thin leading-6 mb-4'>
-						The Syracuse Youth LAX Program has expanded and there is
-						a great need for community involvement. Increased youth
-						players and parents are key to success.
+						<span className='text-xl font-bold leading-6 mb-6'>
+							July 21, 2022
+						</span>
+						<br />
+						6:00pm - 8:00pm
+						<br />
+						<br />
+						<strong>Linda Vista Park</strong>
+						<br />
+						1800 W. 2700 S.
+						<br />
+						Syracuse, UT 84075
+						<br />
+						Grades K - 8.
+						<br />
 					</p>
 					<button
 						className='border border-solid border-blue px-6 py-2 rounded-full hover:bg-blue hover:text-white md:px-10'
@@ -30,7 +42,7 @@ const navigate = useNavigate();
 							navigate('/contact')
 						}}
 					>
-						Contact For Info
+						Registration Openin Soon!
 					</button>
 				</div>
 			</div>

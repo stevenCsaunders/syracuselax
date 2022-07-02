@@ -12,12 +12,12 @@ const ContentHighlight: React.FC = () => {
 				/>
 				<div className='md:ml-10 py-10 '>
 					<h3 className='text-3xl pb-4 font-bold'>
-						Get Ready - Spring 2022 Registration is Open
+						Get Ready - Fall Registration starts July 20th!
 					</h3>
 					<p className='text-lg font-thin leading-6 mb-4'>
 						If you have a child that would like to play for the
-						Syracuse YLAX Program, please get registered. Earlybird
-						registration for boys and girls in grades K-8th is open now!
+						Syracuse Youth LAX Program, please get registered. Earlybird
+						registration for boys and girls in grades K-8th opens July 20th.
 					</p>
 					<button
 						className='px-6 py-2 bg-white text-blue rounded-full hover:bg-blue border hover:border-solid border-white hover:border-current hover:text-white md:px-10'

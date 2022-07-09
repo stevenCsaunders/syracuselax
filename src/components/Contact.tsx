@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import { IHeaderProps, IProps } from '../App'
-import contactImg from '../images/contact.png'
 import emailJs, { init } from 'emailjs-com'
+import sanityClient from '../client'
 
 init('user_zxD5Nb0ISfZhPENNz1C2W')
 
@@ -15,6 +15,31 @@ const Contact: React.FC<IProps & IHeaderProps> = ({
 	const [email, setEmail] = useState('')
 	const [message, setMessage] = useState('')
 	const [emailSent, setEmailSent] = useState(false)
+
+	const [contactData, setContactData] = useState<any>(null)
+
+		useEffect(() => {
+			sanityClient
+				.fetch(
+					`
+			*[_type == "contactUs"]{
+				title,
+				subTitle,
+				buttonText,
+				mainImage{
+					asset->{
+						_id,
+						url
+					},
+					alt
+				}
+			}
+		`
+				)
+				.then((data) => setContactData(data[0]))
+				.catch(console.error)
+		}, [])
+
 
 	const handleSubmit = (e: { preventDefault: () => void }) => {
 		e.preventDefault()
@@ -57,23 +82,26 @@ const Contact: React.FC<IProps & IHeaderProps> = ({
 		'py-3 px-4 rounded-xl  border border-blue bg-transparent text-blue placeholder-blue placeholder-opacity-50 mb-6 mt-2'
 	const labelStyle = 'text-blue text-xl font-thin pl-2 border-l border-blue border-dotted'
 
+			if (!contactData) {
+				return <div>LOADING...</div>
+			}
+
+
 	return (
 		<>
 			<Header
 				handleNavClick={handleNavClick}
 				isNavOpen={isNavOpen}
 				headerStyles={headerStyles}
-				h2Content={
-					'For any questions or info on the Syracuse Youth Lacrosse Program'
-				}
+				h2Content={contactData.subTitle}
 				buttonDivStyles={'hidden'}
-				h1Content={'Contact Us'}
+				h1Content={contactData.title}
 			/>
 			<div className='mx-28'>
 				<div className='flex flex-col xl:flex-row-reverse mb-24 items-start'>
 					<img
-						src={contactImg}
-						alt='Youth Lacrosse Player'
+						src={contactData.mainImage.asset.url}
+						alt={contactData.mainImage.alt}
 						className='xl:w-4 rounded-2xl mb-10 xl:ml-20 shadow-md'
 					/>
 					<div className='w-full '>
@@ -106,7 +134,7 @@ const Contact: React.FC<IProps & IHeaderProps> = ({
 							></textarea>
 							<input
 								type='submit'
-								value='Send'
+								value={contactData.buttonText}
 								className='border border-solid text-white bg-blue px-6 py-2 rounded-full hover:bg-transparent hover:text-blue md:px-10 md:w-5'
 							/>
 							<span
@@ -114,7 +142,8 @@ const Contact: React.FC<IProps & IHeaderProps> = ({
 									!emailSent ? 'hidden' : 'visible'
 								}`}
 							>
-								Thank you for your message, we will be in touch soon!
+								Thank you for your message, we will be in touch
+								soon!
 							</span>
 						</form>
 					</div>

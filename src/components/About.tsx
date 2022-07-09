@@ -20,6 +20,8 @@ const About: React.FC<IProps & IHeaderProps> = ({
 				`
 			*[_type == "about"]{
 				title,
+				subTitle,
+				contentTitle,
 				body,
 				mainImage{
 					asset->{
@@ -45,13 +47,13 @@ const About: React.FC<IProps & IHeaderProps> = ({
 				handleNavClick={handleNavClick}
 				isNavOpen={isNavOpen}
 				headerStyles={headerStyles}
-				h2Content={h2Content}
+				h2Content={aboutData.subTitle}
 				buttonDivStyles={'hidden'}
-				h1Content={'About Syracuse Titans Lacrosse'}
+				h1Content={aboutData.title}
 			/>
 			<div className='mx-28'>
 				<h4 className='text-4xl text- text-center pb-10'>
-					{aboutData.title}
+					{aboutData.contentTitle}
 				</h4>
 				<div className='flex flex-col xl:flex-row-reverse mb-24 items-start'>
 					<img

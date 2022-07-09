@@ -15,8 +15,13 @@ export default {
 			type: 'string',
 		},
 		{
+			name: 'buttonText',
+			title: 'Button Text',
+			type: 'string',
+		},
+		{
 			name: 'mainImage',
-			title: 'Main image',
+			title: 'Main Image',
 			type: 'image',
 			fields: [
 				{

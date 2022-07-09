@@ -10,6 +10,16 @@ export default {
 			type: 'string',
 		},
 		{
+			name: 'subTitle',
+			title: 'Sub Title',
+			type: 'string',
+		},
+		{
+			name: 'contentTitle',
+			title: 'Content Title',
+			type: 'string',
+		},
+		{
 			name: 'body',
 			title: 'Body Content',
 			type: 'blockContent',

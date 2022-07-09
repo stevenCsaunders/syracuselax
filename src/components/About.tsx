@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import { IHeaderProps, IProps } from '../App'
-import aboutImg from '../images/about.png'
-import { Link } from 'react-router-dom'
+import sanityClient from '../client'
+import BlockContent from '@sanity/block-content-to-react'
 
 const About: React.FC<IProps & IHeaderProps> = ({
 	headerStyles,
@@ -10,7 +10,34 @@ const About: React.FC<IProps & IHeaderProps> = ({
 	isNavOpen,
 	handleNavClick,
 }: IProps & IHeaderProps) => {
-	const pStyles = 'text-lg font-thin leading-8 mb-10 text-center md:text-left'
+	const pStyles = 'text-lg font-thin leading-8 text-center md:text-left'
+
+	const [aboutData, setAboutData] = useState<any>(null)
+
+	useEffect(() => {
+		sanityClient
+			.fetch(
+				`
+			*[_type == "about"]{
+				title,
+				body,
+				mainImage{
+					asset->{
+						_id,
+						url
+					},
+					alt
+				}
+			}
+		`
+			)
+			.then((data) => setAboutData(data[0]))
+			.catch(console.error)
+	}, [])
+
+	if (!aboutData) {
+		return <div>LOADING...</div>
+	}
 
 	return (
 		<>
@@ -24,31 +51,16 @@ const About: React.FC<IProps & IHeaderProps> = ({
 			/>
 			<div className='mx-28'>
 				<h4 className='text-4xl text- text-center pb-10'>
-					We are the Titans, Titans, Titans!
+					{aboutData.title}
 				</h4>
 				<div className='flex flex-col xl:flex-row-reverse mb-24 items-start'>
 					<img
-						src={aboutImg}
-						alt='Youth Lacrosse Player'
+						src={aboutData.mainImage.asset.url}
+						alt={aboutData.mainImage.alt}
 						className='xl:w-4 rounded-2xl mb-10 xl:ml-20 shadow-md'
 					/>
-					<div className=''>
-						<p className={pStyles}>
-							The Syracuse Youth Lacrosse Program is a fully
-							volunteer youth lacrosse club dedicated to bringing
-							the sport of lacrosse to those boys and girls who
-							are from Syracuse, Utah and surrounding areas. We
-							primarily draw players from Syracuse, although
-							membership within Syracuse Youth LAX is not
-							restricted to a geographic area.
-						</p>
-						<p className={pStyles}>
-							The Syracuse Youth LAX Program has expanded and
-							there is a great need for community involvement.
-							Increased youth players and parents are key to
-							success. If you would like to volunteer, please{' '}
-							<Link to='/contact' className="text-blue underline hover:text-green">contact us</Link> for more info.
-						</p>
+					<div className={pStyles}>
+						<BlockContent blocks={aboutData.body} />
 					</div>
 				</div>
 			</div>

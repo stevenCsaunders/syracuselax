@@ -6,6 +6,9 @@ a {
     cursor: pointer;
 }
 
+p {
+    margin-bottom: 1rem;
+}
 .hamburger {
     padding: 15px 15px;
     display: inline-block;

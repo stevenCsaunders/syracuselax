@@ -2,14 +2,10 @@ import React from 'react'
 import { useNavigate } from 'react-router'
 
 import contentRight from '../images/content-right.png'
-import FileLink from '../utils/baseLinks'
 
 
 const ContentRight: React.FC = () => {
 
-	const handleFileOpen = (fileName: string) => {
-		window.open(fileName)
-	}
 
 	const navigate = useNavigate()
 

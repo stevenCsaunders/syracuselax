@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import { IHeaderProps, IProps } from '../App'
-import aboutImg from '../images/about.png'
-import { Link } from 'react-router-dom'
+
 
 const Schedules: React.FC<IProps & IHeaderProps> = ({
 	headerStyles,
@@ -10,7 +9,7 @@ const Schedules: React.FC<IProps & IHeaderProps> = ({
 	isNavOpen,
 	handleNavClick,
 }: IProps & IHeaderProps) => {
-	const pStyles = 'text-lg font-thin leading-8 mb-10 text-center md:text-left'
+
 
 	return (
 		<>

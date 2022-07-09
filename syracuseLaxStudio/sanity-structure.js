@@ -1,6 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder'
 
-const hideDocTypes = item => !['about', 'contactUs'].includes(item.getId())
+const hideDocTypes = item => !['about', 'contactUs', 'parents', 'schedules', 'schedule'].includes(item.getId())
 
 export default () =>
 	S.list()
@@ -22,6 +22,24 @@ export default () =>
 						.id('contactUs')
 						.schemaType('contactUs')
 						.documentId('contactUs')
+				),
+			S.divider(),
+			S.listItem()
+				.title('Parents')
+				.child(
+					S.document()
+						.id('parents')
+						.schemaType('parents')
+						.documentId('parents')
+				),
+			S.divider(),
+			S.listItem()
+				.title('Schedules')
+				.child(
+					S.document()
+						.id('schedules')
+						.schemaType('schedules')
+						.documentId('schedules')
 				),
 			S.divider(),
 			...S.documentTypeListItems().filter(hideDocTypes),

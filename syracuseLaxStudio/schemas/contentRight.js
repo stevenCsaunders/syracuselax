@@ -4,8 +4,13 @@ export default {
 	type: 'document',
 	fields: [
 		{
-			name: 'title',
-			title: 'Title',
+			name: 'headertitle',
+			title: 'Header Title',
+			type: 'string',
+		},
+		{
+			name: 'headerSubTitle',
+			title: 'Header Sub Title',
 			type: 'string',
 		},
 		{

@@ -13,6 +13,7 @@ import contentHighlight from './contentHighlight'
 import contentLeft from './contentLeft'
 import contentRight from './contentRight'
 import schedules from './schedules'
+import schedule from './schedule'
 import about from './about'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -32,6 +33,7 @@ export default createSchema({
 		header,
 		parents,
 		schedules,
+		schedule,
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
 		blockContent,

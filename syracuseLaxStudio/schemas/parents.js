@@ -1,6 +1,6 @@
 export default {
 	name: 'parents',
-	title: 'Parents',
+	title: 'Parents Info',
 	type: 'document',
 	fields: [
 		{
@@ -13,5 +13,15 @@ export default {
 			title: 'Description',
 			type: 'text',
 		},
+		{
+			name: 'videoUrls',
+			title: 'Video URLs',
+			type: 'array',
+			of: [
+				{
+					type: 'url'
+				},
+			]
+		}
 	],
 }

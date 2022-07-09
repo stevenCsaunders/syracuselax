@@ -5,16 +5,6 @@ export default {
 
 	fields: [
 		{
-			name: 'title',
-			title: 'Title',
-			type: 'string',
-		},
-		{
-			name: 'subTitle',
-			title: 'Sub Title',
-			type: 'string',
-		},
-		{
 			name: 'contentTitle',
 			title: 'Content Title',
 			type: 'string',

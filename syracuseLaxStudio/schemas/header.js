@@ -4,24 +4,31 @@ export default {
 	type: 'document',
 	fields: [
 		{
-			name: 'title',
-			title: 'Title',
+			name: 'headertitle',
+			title: 'Header Title',
 			type: 'string',
 		},
 		{
-			name: 'subtitle',
-			title: 'Sub-Title',
-			type: 'text',
+			name: 'headerSubTitle',
+			title: 'Header Sub Title',
+			type: 'string',
+		},
+		{
+			name: 'showHeaderButtons',
+			title: 'Show Header Buttons',
+			type: 'boolean',
 		},
 		{
 			name: 'buttonOneText',
 			title: 'Button One Text',
 			type: 'string',
+			hidden: ({document}) => document.showHeaderButtons === false,
 		},
 		{
 			name: 'buttonTwoText',
 			title: 'Button Two Text',
 			type: 'string',
+			hidden: ({document}) => document.showHeaderButtons === false,
 		},
 	],
 }

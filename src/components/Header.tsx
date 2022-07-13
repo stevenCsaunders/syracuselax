@@ -1,21 +1,38 @@
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import NavBar from './NavBar'
-import { IHeaderProps, IProps } from '../App'
-import { useNavigate } from 'react-router-dom'
+import { IProps } from '../App'
+import SanityClient from '../client'
+
+export interface IHeaderProps {
+	//required props
+	headerTitle: string
+	headerId?: string
+	//not required props
+	headerSubTitle?: string
+	headerStyles?: string
+	buttonDivStyles?: string
+	showHeaderButtons?: boolean
+	buttonOneText?: string
+	buttonTwoText?: string
+	buttonTwoLink?: string
+	buttonOneLink?: string
+}
 
 const Header: FC<IProps & IHeaderProps> = ({
 	isNavOpen,
 	handleNavClick,
 	headerStyles,
+	headerTitle,
+	headerSubTitle,
+	buttonOneLink,
+	buttonOneText,
+	buttonTwoLink,
+	buttonTwoText,
 	buttonDivStyles,
-	h2Content,
-	h1Content
 }: IProps & IHeaderProps) => {
 	//TODO
 	//any state for header or props for NavBar component go here
 	//separate out button component and pass props for text and functionality
-
-	let navigate = useNavigate()
 
 	return (
 		<header
@@ -23,32 +40,31 @@ const Header: FC<IProps & IHeaderProps> = ({
 		>
 			<NavBar isNavOpen={isNavOpen} handleNavClick={handleNavClick} />
 			<h1 className='text-4xl text-white pb-4 md:text-5xl'>
-				{h1Content}
+				{headerTitle}
 			</h1>
 			<h2 className='text-lg font-light pb-12 text-white md:text-2xl'>
-				{h2Content}
+				{headerSubTitle}
 			</h2>
 			<div
 				className={`${buttonDivStyles} flex gap-4 justify-center pb-32 md:gap-6`}
 			>
+				{/* conditionally render the buttons based on the togle being true or not */}
+
 				<button
 					className='px-6 py-2 bg-white text-blue rounded-full hover:bg-opacity-80 md:px-10 md:py-3'
 					onClick={() => {
-						window.open(
-							'http://www.imlaxutah.org/Registration/Default.asp?org=imlaxutah.org',
-							'_blank'
-						)
+						window.open(`${buttonOneLink}`, '_blank')
 					}}
 				>
-					<strong>Fall Registration Opens July 20th</strong>
+					<strong>{buttonOneText}</strong>
 				</button>
 				<button
 					className='border border-solid border-white px-6 py-2 rounded-full hover:bg-white hover:bg-opacity-20 md:px-10 md:py-3'
 					onClick={() => {
-						navigate('/contact')
+						window.open(`${buttonTwoLink}`, '_blank')
 					}}
 				>
-					Contact
+					{buttonTwoText}
 				</button>
 			</div>
 		</header>

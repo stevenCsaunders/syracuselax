@@ -1,26 +1,53 @@
-import React from 'react'
-import { IHeaderProps, IProps } from '../App'
+import sanityClient from '../client'
+import React, { useEffect, useState } from 'react'
+import { IProps } from '../App'
 import ContentHighlight from './ContentHighlight'
 import ContentLeft from './ContentLeft'
 import ContentRight from './ContentRight'
 import Header from './Header'
 
-const Main: React.FC<IProps & IHeaderProps> = ({
-	headerStyles,
+const Main: React.FC<IProps> = ({
 	isNavOpen,
 	handleNavClick,
-}: IProps & IHeaderProps) => {
-	return (
+}: IProps) => {
+
+	const [mainData, setMainData] = useState<any>(null)
+
+	useEffect(() => {
+		sanityClient
+			.fetch(
+				`
+			*[_type == "headers" && headerId == "main"] {
+				headerTitle,
+				headerSubTitle,
+				buttonOneText,
+				buttonTwoText,
+				buttonOneLink,
+				buttonTwoLink,
+				showHeaderButtons,
+			}
+		`
+			)
+			.then((data) => setMainData(data[0]))
+			.catch(console.error)
+	}, [])
+
+		if (!mainData) {
+			return <div>LOADING...</div>
+		}
+
+
+return (
 		<>
 			<Header
 				handleNavClick={handleNavClick}
 				isNavOpen={isNavOpen}
-				headerStyles={headerStyles}
-				h2Content={
-					'The Syracuse Youth LAX Program is for boys and girls grades K-8'
-				}
-				buttonDivStyles={''}
-				h1Content={'Syracuse Titans Youth Lacrosse'}
+				headerTitle={mainData.headerTitle}
+				headerSubTitle={mainData.headerSubTitle}
+				buttonOneText={mainData.buttonOneText}
+				buttonOneLink={mainData.buttonOneLink}
+				buttonTwoText={mainData.buttonTwoText}
+				buttonTwoLink={mainData.buttonTwoLink}
 			/>
 
 			<main className='mx-4 md:mx-28'>

@@ -8,13 +8,14 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
 import parents from './parents'
 import contactUs from './contactUs'
-import header from './header'
+import headers from './headers'
 import contentHighlight from './contentHighlight'
 import contentLeft from './contentLeft'
 import contentRight from './contentRight'
 import schedules from './schedules'
 import schedule from './schedule'
 import about from './about'
+import videoLink from './videoLink'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,10 +31,11 @@ export default createSchema({
 		contentLeft,
 		contentRight,
 		contactUs,
-		header,
+		headers,
 		parents,
 		schedules,
 		schedule,
+		videoLink,
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
 		blockContent,

@@ -1,43 +1,51 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
-import { IHeaderProps, IProps } from '../App'
+import { IProps } from '../App'
 import sanityClient from '../client'
 import BlockContent from '@sanity/block-content-to-react'
 
-const About: React.FC<IProps & IHeaderProps> = ({
-	headerStyles,
-	h2Content,
-	isNavOpen,
-	handleNavClick,
-}: IProps & IHeaderProps) => {
+const About: React.FC<IProps> = ({ isNavOpen, handleNavClick }: IProps) => {
 	const pStyles = 'text-lg font-thin leading-8 text-center md:text-left'
 
 	const [aboutData, setAboutData] = useState<any>(null)
+	const [headerData, setHeaderData] = useState<any>(null)
 
 	useEffect(() => {
 		sanityClient
 			.fetch(
 				`
-			*[_type == "about"]{
-				title,
-				subTitle,
-				contentTitle,
-				body,
-				mainImage{
-					asset->{
-						_id,
-						url
-					},
-					alt
-				}
-			}
+					*[_type == "about"]{
+						title,
+						subTitle,
+						contentTitle,
+						body,
+						mainImage{
+							asset->{
+								_id,
+								url
+							},
+							alt
+						}
+					}
 		`
 			)
 			.then((data) => setAboutData(data[0]))
 			.catch(console.error)
+
+		sanityClient
+			.fetch(
+				`
+					*[_type == 'headers' && headerId == 'about'] {
+						headerTitle,
+						showHeaderButtons,
+					}
+		`
+			)
+			.then((data) => setHeaderData(data[0]))
+			.catch(console.error)
 	}, [])
 
-	if (!aboutData) {
+	if (!aboutData || !headerData) {
 		return <div>LOADING...</div>
 	}
 
@@ -46,10 +54,8 @@ const About: React.FC<IProps & IHeaderProps> = ({
 			<Header
 				handleNavClick={handleNavClick}
 				isNavOpen={isNavOpen}
-				headerStyles={headerStyles}
-				h2Content={aboutData.subTitle}
+				headerTitle={headerData.headerTitle}
 				buttonDivStyles={'hidden'}
-				h1Content={aboutData.title}
 			/>
 			<div className='mx-28'>
 				<h4 className='text-4xl text- text-center pb-10'>

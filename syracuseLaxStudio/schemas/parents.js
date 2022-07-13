@@ -4,24 +4,24 @@ export default {
 	type: 'document',
 	fields: [
 		{
-			name: 'title',
-			title: 'Title',
+			name: 'contentTitle',
+			title: 'Content Title',
 			type: 'string',
 		},
 		{
 			name: 'description',
 			title: 'Description',
-			type: 'text',
+			type: 'blockContent',
 		},
 		{
-			name: 'videoUrls',
-			title: 'Video URLs',
+			name: 'addVideoLinks',
+			title: 'Add Video Links',
 			type: 'array',
 			of: [
 				{
-					type: 'url'
+					type: 'videoLink',
 				},
-			]
-		}
+			],
+		},
 	],
 }

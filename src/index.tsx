@@ -13,10 +13,6 @@ ReactDOM.render(
 				handleNavClick={function (): void {
 					throw new Error('Function not implemented.')
 				}}
-				headerStyles={''}
-				h2Content={''}
-				h1Content={''}
-				buttonDivStyles={''}
 			/>
 		</BrowserRouter>
 	</React.StrictMode>,

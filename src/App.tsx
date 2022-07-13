@@ -11,14 +11,8 @@ export interface IProps {
 	isNavOpen?: boolean
 	handleNavClick?: () => void
 }
-export interface IHeaderProps {
-	headerStyles?: string
-	h2Content?: string
-	h1Content?: string
-	buttonDivStyles?: string
-}
 
-const App: FC<IProps & IHeaderProps> = () => {
+const App: FC<IProps> = () => {
 	//TODO
 	const [isNavOpen, setIsNavOpen] = useState(false)
 
@@ -36,10 +30,6 @@ const App: FC<IProps & IHeaderProps> = () => {
 						<Main
 							handleNavClick={handleNavClick}
 							isNavOpen={isNavOpen}
-							headerStyles={''}
-							buttonDivStyles={''}
-							h2Content={''}
-							h1Content={''}
 						/>
 					}
 				/>
@@ -49,10 +39,6 @@ const App: FC<IProps & IHeaderProps> = () => {
 						<About
 							handleNavClick={handleNavClick}
 							isNavOpen={isNavOpen}
-							headerStyles={''}
-							buttonDivStyles={''}
-							h2Content={''}
-							h1Content={''}
 						/>
 					}
 				/>
@@ -62,10 +48,6 @@ const App: FC<IProps & IHeaderProps> = () => {
 						<Contact
 							handleNavClick={handleNavClick}
 							isNavOpen={isNavOpen}
-							headerStyles={''}
-							buttonDivStyles={''}
-							h2Content={''}
-							h1Content={''}
 						/>
 					}
 				/>
@@ -75,10 +57,6 @@ const App: FC<IProps & IHeaderProps> = () => {
 						<Schedules
 							handleNavClick={handleNavClick}
 							isNavOpen={isNavOpen}
-							headerStyles={''}
-							buttonDivStyles={''}
-							h2Content={''}
-							h1Content={''}
 						/>
 					}
 				/>
@@ -88,10 +66,6 @@ const App: FC<IProps & IHeaderProps> = () => {
 						<ParentsInfo
 							handleNavClick={handleNavClick}
 							isNavOpen={isNavOpen}
-							headerStyles={''}
-							buttonDivStyles={''}
-							h2Content={''}
-							h1Content={''}
 						/>
 					}
 				/>

@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
-import { IHeaderProps, IProps } from '../App'
+import { IProps } from '../App'
 import emailJs, { init } from 'emailjs-com'
 import sanityClient from '../client'
 
 init('user_zxD5Nb0ISfZhPENNz1C2W')
 
-const Contact: React.FC<IProps & IHeaderProps> = ({
-	headerStyles,
+const Contact: React.FC<IProps> = ({
 	isNavOpen,
 	handleNavClick,
-}: IProps & IHeaderProps) => {
+}: IProps) => {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [message, setMessage] = useState('')
@@ -92,10 +91,9 @@ const Contact: React.FC<IProps & IHeaderProps> = ({
 			<Header
 				handleNavClick={handleNavClick}
 				isNavOpen={isNavOpen}
-				headerStyles={headerStyles}
-				h2Content={contactData.subTitle}
+				headerTitle={contactData.title}
+				headerSubTitle={contactData.subTitle}
 				buttonDivStyles={'hidden'}
-				h1Content={contactData.title}
 			/>
 			<div className='mx-28'>
 				<div className='flex flex-col xl:flex-row-reverse mb-24 items-start'>

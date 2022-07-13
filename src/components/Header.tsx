@@ -6,7 +6,6 @@ import SanityClient from '../client'
 export interface IHeaderProps {
 	//required props
 	headerTitle: string
-	headerId?: string
 	//not required props
 	headerSubTitle?: string
 	headerStyles?: string
@@ -59,7 +58,7 @@ const Header: FC<IProps & IHeaderProps> = ({
 					<strong>{buttonOneText}</strong>
 				</button>
 				<button
-					className='border border-solid border-white px-6 py-2 rounded-full hover:bg-white hover:bg-opacity-20 md:px-10 md:py-3'
+					className='border-2 border-solid border-white text-white px-6 py-2 rounded-full hover:bg-white hover:bg-opacity-20 md:px-10 md:py-3'
 					onClick={() => {
 						window.open(`${buttonTwoLink}`, '_blank')
 					}}
